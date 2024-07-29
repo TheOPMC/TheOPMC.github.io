@@ -3,12 +3,12 @@ body {
     margin: 0;
     padding: 0;
     line-height: 1.6;
-    background-color: #f5f5f5;
+    background-color: #ffffff;
 }
 
 .navbar {
     overflow: hidden;
-    background-color: #333;
+    background-color: #f5f5f5;
     position: fixed;
     top: 0;
     width: 100%;
@@ -18,7 +18,7 @@ body {
 .navbar a {
     float: left;
     display: block;
-    color: #f2f2f2;
+    color: #333;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
@@ -31,15 +31,22 @@ body {
 
 .section {
     padding: 80px 20px;
-    margin-top: 50px;
-    max-width: 800px;
+    max-width: 1200px;
     margin-left: auto;
     margin-right: auto;
-    background-color: #ffffff;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    border-radius: 8px;
-    margin-bottom: 20px;
+    border-top: 1px solid #e0e0e0;
+    border-bottom: 1px solid #e0e0e0;
+    transition: background-color 0.3s ease;
 }
+
+.section:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.section:nth-child(odd) {
+    background-color: #f0f0f0;
+}
+
 
 h1 {
     font-size: 2.5em;
@@ -70,10 +77,8 @@ p {
 }
 
 .member {
-    background-color: white;
+    background-color: transparent;
     padding: 10px;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
     text-align: center;
 }
 
@@ -86,4 +91,52 @@ p {
 .school {
     font-size: 0.9em;
     color: #777;
+}
+
+#home {
+    background-image: url('/templates/figures/pymol.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.text-wrapper {
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+#faq {
+    background-color: #f9f9f9;
+    padding: 40px 20px;
+    border-radius: 8px;
+    margin: 20px 0;
+    font-family: Arial, sans-serif;
+    color: #333;
+}
+
+#faq h1 {
+    font-size: 2.5em;
+    text-align: center;
+    margin-bottom: 30px;
+    color: #222;
+}
+
+#faq .faq-item {
+    margin-bottom: 30px;
+}
+
+#faq .faq-item h2 {
+    font-size: 1.8em;
+    color: #444;
+    margin-bottom: 15px;
+}
+
+#faq .faq-item p {
+    font-size: 1.2em;
+    line-height: 1.6;
+    color: #666;
 }
