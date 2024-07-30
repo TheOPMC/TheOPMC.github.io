@@ -15,7 +15,7 @@
     <a href="#members">Members</a>
     <a href="#joinus">Join Us</a>
     <a href="#contact">Contact</a>
-    <a href="#faq">FAQs</a>
+    <a href="#faqs">FAQs</a>
 </div>
 
 <div id="home" class="section">
@@ -65,7 +65,7 @@
             <span class="school">Technische Universität München</span>
         </div>
         <div class="member">
-            <span class="name">Pascal Notin</span>
+            <span class="name">Pascal Notin</span><br>
             <span class="school">Harvard University</span>
         </div>
         <div class="member">
@@ -81,11 +81,11 @@
             <span class="school">Westlake University</span>
         </div>
         <div class="member">
-            <span class="name">Xing Chang</span>
+            <span class="name">Xing Chang</span><br>
             <span class="school">Westlake University</span>
         </div>
         <div class="member">
-            <span class="name">Huaizong Shen</span>
+            <span class="name">Huaizong Shen</span><br>
             <span class="school">Westlake University</span>
         </div>
         <div class="member">
@@ -97,11 +97,11 @@
             <span class="school">Duke University</span>
         </div>
         <div class="member">
-            <span class="name">Debora Marks</span>
+            <span class="name">Debora Marks</span><br>
             <span class="school">Harvard University</span>
         </div>
         <div class="member">
-            <span class="name">Anping Zeng</span>
+            <span class="name">Anping Zeng</span><br>
             <span class="school">Westlake University</span>
         </div>
         <div class="member">
@@ -109,7 +109,7 @@
             <span class="school">Westlake University</span>
         </div>
         <div class="member">
-            <span class="name">Anthony Gitter</span>
+            <span class="name">Anthony Gitter</span><br>
             <span class="school">University of Wisconsin-Madison</span>
         </div>
     </div>·
@@ -144,10 +144,10 @@
 <div id="contact" class="section">
     <h2>Contact</h2>
     <p>
-        First author: Jin Su (<a href="mailto:sujin@westlake.edu.cn">sujin [AT] westlake.edu.cn</a>)
+        Dr. Fajie Yuan (<a href="mailto:yuanfajie [AT] westlake.edu.cn">yuanfajie [AT] westlake.edu.cn</a>)
     </p>
     <p>
-        Corresponding author: Fajie Yuan (<a href="mailto:yuanfajie [AT] westlake.edu.cn">yuanfajie [AT] westlake.edu.cn</a>)
+        Jin Su (<a href="mailto:sujin@westlake.edu.cn">sujin [AT] westlake.edu.cn</a>)
     </p>
     <p>
         Lab Github page: <a href="https://github.com/westlake-repl">Westlake Representation Learning Lab</a>
@@ -155,102 +155,102 @@
 </div>
 
 <div id="faqs" class="section">
-<h2>FAQs</h2>
-<h3>Q1: It seems like OPMC and SaprotHub are intertwined but not exactly the same.</h3>
-<p>Yes, OPMC is a grand goal, and in this paper, it is primarily presented as a concept and vision. The paper introduces 
-OPMC and implements SaprotHub as a pioneering example to drive the initial realization of OPMC. 
-Achieving a broader implementation of OPMC requires continuous efforts from the entire community.</p>
-<h3 id="q2--im-very-interested-in-the-opmc-side-of-this-project-would-i-be-able-to-support-ompc-independently">Q2:  I&#39;m very interested in the OPMC side of this project? Would I be able to support OMPC independently?</h3>
-<p>Yes, you can. OPMC is not tied exclusively to SaprotHub. SaprotHub serves as an initial implementation case within the
-broader OPMC concept. We also welcome the inclusion of new protein models in OPMC. There are generally two ways to
-contribute: either independently of SaprotHub, such as building ESMHub or ProtTransHub, or by joining SaprotHub. While
-SaprotHub is named after its first model, Saprot, it is not limited to Saprot alone and welcomes the inclusion of 
-other  language models. The concept of OPMC originated from the SaprotHub paper, so if you would like your protein 
-model to be part of OPMC or if you adopt the similar construction approach of SaprotHub, we encourage you to cite the
-source paper. Also see Q9.</p>
-<h3 id="q3-whats-the-relation-between-opmc-and-the-openfold-consortium">Q3: What&#39;s the relation between OPMC and the OpenFold Consortium?</h3>
-<p>The goal of the OpenFold Consortium is to develop free and open-source software tools. This differs from the goals of
-OPMC. OPMC aims to make it easy for all biologists (especially those without machine learning backgrounds and coding
-skills) to train their own protein models, and to share these models with the community members, allowing for 
-integration and collaborative development on top of the existing community models.</p>
-<p>Additionally, so far, the OpenFold Consortium seems to be focusing more on protein structure prediction, while OPMC
-is more focused on protein function prediction. Furthermore, the number of protein function task categories is far 
-greater than the number of structure tasks. As a result, biologists often have to fine-tune large pre-trained protein 
-models based on their own training data, which is a key feature of OPMC.</p>
-<h3 id="q4-is-the-idea-to-create-a-company-that-provides-the-resources-for-biologists-to-do-model-training-im-unsure-the-vision-here-since-a-lot-of-model-training-is-resource-and-data-constrained-it-would-be-hard-to-create-something-where-every-biologist-to-train-their-own-ai-models-with-just-a-few-clicks-who-would-provide-the-resources-in-this-case">Q4: Is the idea to create a company that provides the resources for biologists to do model training? I&#39;m unsure the vision here, since a lot of model training is resource and data constrained. It would be hard to create something where &quot;every biologist to train their own AI models with just a few clicks.&quot; Who would provide the resources in this case?</h3>
-<p>No, the primary motivation behind OPMC is to enable biologists to participate in protein model training and 
-collaborative development, without direct involvement of creating a company or commercial operation.</p>
-<p>Currently, we do not provide free training resources. Users have the option to purchase GPUs, such as the A100, on 
-platforms like Colab. OPMC primarily supports fine-tuning tasks or direct prediction tasks for protein language models,
-rather than pre-training. These tasks typically do not require excessively expensive computational power. With a 
-budget of around $10, one can easily complete training and prediction tasks on several thousand samples. This cost 
-is manageable for most individuals and academic institutions. There are also free GPU resources in Colab but they 
-may not be sufficient for some of your tasks.</p>
-<p>In the future, we may explore options such as applying for funding or accepting donations to provide some free 
-computational resources to users. Please note that the purpose of SaprotHub and OPMC is not to provide free computational
-resources. </p>
-<h3 id="q5-we-are-open-sourcing-models-as-well-so-it-would-be-interesting-to-collaborate-once-we-release-these-models-however-it-seems-like-currently-the-hub-is-geared-towards-saprot-as-the-main-model-of-choice">Q5: We are open sourcing models as well, so it would be interesting to collaborate once we release these models. However, it seems like currently the hub is geared towards SaProt as the main model of choice.</h3>
-<p>Saprot is the first model to join the hub, so we named it SaprotHub. However, SaprotHub can also accept other protein
-models, such as ESM. Of course, you can also independently develop your own model hub. In the future, we will create
-a webpage for OPMC that will include all the participating models.</p>
-<p>The reason we adopted the Saprot model is that it is a near-universal model, capable of supporting any protein and 
-residue-level prediction task, including regression, classification, ranking, as well as zero-shot mutational effect
-prediction and sequence design tasks. Saprot is also the state-of-the-art protein language model in the community.</p>
-<p>Additionally, we also hope to include as many other protein language models as possible, but due to limited human
-resources, we are unable to integrate all the existing protein language models. This is precisely the purpose of 
-building a community (the development of ColabSaprot took us approximately 4 months. Of course, with the open-sourcing
-of ColabSaprot, it will be much easier to implement similar functionality for other protein language models).</p>
-<p>We believe that with the joint efforts of the entire community, the OPMC community store can become more diverse, 
-and biologists can choose the models that best suit their needs. Therefore, we sincerely invite researchers who are
-interested in OPMC to join us, and if you have better suggestions, we welcome you to join us in co-building OPMC.</p>
-<h3 id="q6-esm-alphafold-and-openfold-models-are-not-mentioned-in-the-hub">Q6: ESM, AlphaFold, and Openfold models are not mentioned in the hub.</h3>
-<p>OPMC mainly focuses on protein function prediction. So ESM is a good fit, AlphaFold and OpenFold target at protein 
-structure prediction, and could be independent of OPMC or SaprotHub. But please note that developing another ColabESM 
-will also take some time, and we welcome researchers to integrate the ESM or other models onto the hub.</p>
-<h3 id="q7-how-do-you-foresee-collaborating-and-sharing-other-open-models">Q7: How do you foresee collaborating and sharing other open models?</h3>
-<p>The SaprotHub paper primarily focuses on collaboration and sharing within the framework of one backbone model, as this
-can greatly reduce storage and communication costs by leveraging Adapter technique – users just need to operate on the
-adapters rather than the large backbone model. Since these models are based on the same backbone network, the input
-format, network and parameter interfaces are more consistent, which serves as the basic for community sharing, 
-collaboration and co-construction.</p>
-<p>As for sharing between different backbone models, this remains a challenge at the moment, although it is an 
-interesting research direction without an ideal solution yet. For example, if users want to collaborate between 
-ESM15B and Saprot650M, they would need to upload and download the two complete models, significantly increasing 
-communication and maintenance costs. As the number of models integrated increases, the demand on GPU performance 
-would also increase rapidly. </p>
-<p>However, by using the same backbone model and the Adapter mechanism, these difficulties can be elegantly solved. The
-Adapters in SaprotHub is just like grafting techniques in biology. Just as a single tree can bear different kinds of 
-fruit, Saprot acts like the trunk, and the adapters for various downstream tasks resemble the different fruits on the
-Saprot tree.</p>
-<p>Additionally, due to the differences in model architecture, input, and output across different models, it is difficult
-to design a unified interface. Therefore, this paper serves as an initial exploration of OPMC and does not cover 
-collaboration between different backbone models. This may require more effort from the community, but holds promise 
-for the future.</p>
-<h3 id="q8-how-does-this-differentiate-saprothub-from-hugging-face">Q8: How does this differentiate SaprotHub from Hugging Face?</h3>
-<p>SaprotHub primarily focuses on storing lightweight Adapters, whereas Hugging Face stores complete pre-trained models.
-SaprotHub adopts the Adapter mechanism, which enables biologists to easily share, co-develop, and collaborate within
-ColabSaprot.</p>
-<p>The goal of SaprotHub is to allow all biologists to train their own protein models even without machine learning and 
-coding background, while Hugging Face&#39;s objective is to open-source the model weights without considering the easy 
-training aspect.</p>
-<p>SaprotHub is dedicated to establishing the AI model community for proteins, while Hugging Face has a broader scope.
-Therefore, SaprotHub&#39;s Adapter store can be built on top of Hugging Face or developed independently.</p>
-<h3 id="q9-if-i-develop-other-protein-language-models-plms-and-online-platforms-following-saprothub-and-colabsaprot-can-i-be-an-author-on-the-saprothub-paper">Q9: If I develop other protein language models (PLMs) and online platforms following SaprotHub and ColabSaprot, can I be an author on the SaprotHub paper?</h3>
-<p>All OPMC members will be listed as authors in the SaprotHub paper before its final revision, which is expected to take 4-12 months. Author&#39;s name will be included in the paper. Please note that eligibility to become an OPMC member is determined by the steering committee.</p>
-<p>If an author of the SaprotHub paper is acknowledged for their contribution in developing a different protein language model (whether it&#39;s a new model or an existing one) that is not related to SaprotHub&#39;s functions, it is required that they acknowledge this new protein language model as automatically being part of the OPMC framework. 
-In case they publish a paper, just menton this somewhere in the paper. Additionally, any future scientific literature that utilizes this language model for their research should also cite the SaprotHub paper as a reference of OPMC.</p>
-<h3 id="q10-how-to-be-a-member-of-opmc-or-an-author-of-saprothub">Q10: How to be a member of OPMC or an author of SaprotHub.</h3>
-<p>Before the final revision of SaprotHub, all OPMC members will be automatically included as authors. However, after the publication of SaprotHub, individuals can still join OPMC but will not be able to be listed as authors in the paper, as it is subject to the requirements of the journal publication - the final version needs to determine the author list.</p>
-<p>Regarding how to join OPMC, please refer to: 
-	<a href="#joinus">here</a>. 
-</p>
-<p>All in all, if you can come up with some cool ideas or novel ways to enhance the impact and influence of Saprot, ColabSaprot, SaprotHub, or OPMC, you may have the opportunity to be listed as an author.</p>
-<h3 id="q11-if-i-have-made-a-lot-of-valuable-contributions-to-opmc-can-i-become-an-opmc-member-together-with-my-supervisor">Q11: If I have made a lot of valuable contributions to OPMC, can I become an OPMC member together with my supervisor?</h3>
-<p>Yes. If you have made significant valuable contributions to OPMC, it is possible to become an OPMC member alongside your PhD/postgraduate or internship supervisor. However, the acceptance of your contributions and membership status will be determined by the steering committee. Generally, in such cases, you would need to demonstrate more substantial contributions compared to regular OPMC members. You need to provide official documentation of your relationship with your supervisor, such as an official letter or document confirming their role and support.</p>
-<h3 id="q11-can-i-use-copy-the-code-of-colabsaprot-for-my-own-protein-language-model-to-build-another-colabplm">Q11: Can I use copy the code of ColabSaprot for my own protein language model to build another ColabPLM?</h3>
-<p>Yes, you can. But you need to agree to join OPMC, and all papers that use your ColabPLM for research are encouraged to cite the SaprotHub paper, which is the source literature of OPMC.</p>
-<h3 id="q13-would-the-paper-be-submitted-to-a-journal">Q13: Would the paper be submitted to a journal.</h3>
-<p>Yes, we plan to submit it to Nature Methods in the form of brief communication. The editor-in-chief of NBT said that the author list of OPMC could be confirmed in the final version. So you have several months time to contribute and join us.</p>
+    <h2>FAQs</h2>
+    <h3>Q1: It seems like OPMC and SaprotHub are intertwined but not exactly the same.</h3>
+    <p>Yes, OPMC is a grand goal, and in this paper, it is primarily presented as a concept and vision. The paper introduces 
+    OPMC and implements SaprotHub as a pioneering example to drive the initial realization of OPMC. 
+    Achieving a broader implementation of OPMC requires continuous efforts from the entire community.</p>
+    <h3 id="q2--im-very-interested-in-the-opmc-side-of-this-project-would-i-be-able-to-support-ompc-independently">Q2:  I&#39;m very interested in the OPMC side of this project? Would I be able to support OMPC independently?</h3>
+    <p>Yes, you can. OPMC is not tied exclusively to SaprotHub. SaprotHub serves as an initial implementation case within the
+    broader OPMC concept. We also welcome the inclusion of new protein models in OPMC. There are generally two ways to
+    contribute: either independently of SaprotHub, such as building ESMHub or ProtTransHub, or by joining SaprotHub. While
+    SaprotHub is named after its first model, Saprot, it is not limited to Saprot alone and welcomes the inclusion of 
+    other  language models. The concept of OPMC originated from the SaprotHub paper, so if you would like your protein 
+    model to be part of OPMC or if you adopt the similar construction approach of SaprotHub, we encourage you to cite the
+    source paper. Also see Q9.</p>
+    <h3 id="q3-whats-the-relation-between-opmc-and-the-openfold-consortium">Q3: What&#39;s the relation between OPMC and the OpenFold Consortium?</h3>
+    <p>The goal of the OpenFold Consortium is to develop free and open-source software tools. This differs from the goals of
+    OPMC. OPMC aims to make it easy for all biologists (especially those without machine learning backgrounds and coding
+    skills) to train their own protein models, and to share these models with the community members, allowing for 
+    integration and collaborative development on top of the existing community models.</p>
+    <p>Additionally, so far, the OpenFold Consortium seems to be focusing more on protein structure prediction, while OPMC
+    is more focused on protein function prediction. Furthermore, the number of protein function task categories is far 
+    greater than the number of structure tasks. As a result, biologists often have to fine-tune large pre-trained protein 
+    models based on their own training data, which is a key feature of OPMC.</p>
+    <h3 id="q4-is-the-idea-to-create-a-company-that-provides-the-resources-for-biologists-to-do-model-training-im-unsure-the-vision-here-since-a-lot-of-model-training-is-resource-and-data-constrained-it-would-be-hard-to-create-something-where-every-biologist-to-train-their-own-ai-models-with-just-a-few-clicks-who-would-provide-the-resources-in-this-case">Q4: Is the idea to create a company that provides the resources for biologists to do model training? I&#39;m unsure the vision here, since a lot of model training is resource and data constrained. It would be hard to create something where &quot;every biologist to train their own AI models with just a few clicks.&quot; Who would provide the resources in this case?</h3>
+    <p>No, the primary motivation behind OPMC is to enable biologists to participate in protein model training and 
+    collaborative development, without direct involvement of creating a company or commercial operation.</p>
+    <p>Currently, we do not provide free training resources. Users have the option to purchase GPUs, such as the A100, on 
+    platforms like Colab. OPMC primarily supports fine-tuning tasks or direct prediction tasks for protein language models,
+    rather than pre-training. These tasks typically do not require excessively expensive computational power. With a 
+    budget of around $10, one can easily complete training and prediction tasks on several thousand samples. This cost 
+    is manageable for most individuals and academic institutions. There are also free GPU resources in Colab but they 
+    may not be sufficient for some of your tasks.</p>
+    <p>In the future, we may explore options such as applying for funding or accepting donations to provide some free 
+    computational resources to users. Please note that the purpose of SaprotHub and OPMC is not to provide free computational
+    resources. </p>
+    <h3 id="q5-we-are-open-sourcing-models-as-well-so-it-would-be-interesting-to-collaborate-once-we-release-these-models-however-it-seems-like-currently-the-hub-is-geared-towards-saprot-as-the-main-model-of-choice">Q5: We are open sourcing models as well, so it would be interesting to collaborate once we release these models. However, it seems like currently the hub is geared towards SaProt as the main model of choice.</h3>
+    <p>Saprot is the first model to join the hub, so we named it SaprotHub. However, SaprotHub can also accept other protein
+    models, such as ESM. Of course, you can also independently develop your own model hub. In the future, we will create
+    a webpage for OPMC that will include all the participating models.</p>
+    <p>The reason we adopted the Saprot model is that it is a near-universal model, capable of supporting any protein and 
+    residue-level prediction task, including regression, classification, ranking, as well as zero-shot mutational effect
+    prediction and sequence design tasks. Saprot is also the state-of-the-art protein language model in the community.</p>
+    <p>Additionally, we also hope to include as many other protein language models as possible, but due to limited human
+    resources, we are unable to integrate all the existing protein language models. This is precisely the purpose of 
+    building a community (the development of ColabSaprot took us approximately 4 months. Of course, with the open-sourcing
+    of ColabSaprot, it will be much easier to implement similar functionality for other protein language models).</p>
+    <p>We believe that with the joint efforts of the entire community, the OPMC community store can become more diverse, 
+    and biologists can choose the models that best suit their needs. Therefore, we sincerely invite researchers who are
+    interested in OPMC to join us, and if you have better suggestions, we welcome you to join us in co-building OPMC.</p>
+    <h3 id="q6-esm-alphafold-and-openfold-models-are-not-mentioned-in-the-hub">Q6: ESM, AlphaFold, and Openfold models are not mentioned in the hub.</h3>
+    <p>OPMC mainly focuses on protein function prediction. So ESM is a good fit, AlphaFold and OpenFold target at protein 
+    structure prediction, and could be independent of OPMC or SaprotHub. But please note that developing another ColabESM 
+    will also take some time, and we welcome researchers to integrate the ESM or other models onto the hub.</p>
+    <h3 id="q7-how-do-you-foresee-collaborating-and-sharing-other-open-models">Q7: How do you foresee collaborating and sharing other open models?</h3>
+    <p>The SaprotHub paper primarily focuses on collaboration and sharing within the framework of one backbone model, as this
+    can greatly reduce storage and communication costs by leveraging Adapter technique – users just need to operate on the
+    adapters rather than the large backbone model. Since these models are based on the same backbone network, the input
+    format, network and parameter interfaces are more consistent, which serves as the basic for community sharing, 
+    collaboration and co-construction.</p>
+    <p>As for sharing between different backbone models, this remains a challenge at the moment, although it is an 
+    interesting research direction without an ideal solution yet. For example, if users want to collaborate between 
+    ESM15B and Saprot650M, they would need to upload and download the two complete models, significantly increasing 
+    communication and maintenance costs. As the number of models integrated increases, the demand on GPU performance 
+    would also increase rapidly. </p>
+    <p>However, by using the same backbone model and the Adapter mechanism, these difficulties can be elegantly solved. The
+    Adapters in SaprotHub is just like grafting techniques in biology. Just as a single tree can bear different kinds of 
+    fruit, Saprot acts like the trunk, and the adapters for various downstream tasks resemble the different fruits on the
+    Saprot tree.</p>
+    <p>Additionally, due to the differences in model architecture, input, and output across different models, it is difficult
+    to design a unified interface. Therefore, this paper serves as an initial exploration of OPMC and does not cover 
+    collaboration between different backbone models. This may require more effort from the community, but holds promise 
+    for the future.</p>
+    <h3 id="q8-how-does-this-differentiate-saprothub-from-hugging-face">Q8: How does this differentiate SaprotHub from Hugging Face?</h3>
+    <p>SaprotHub primarily focuses on storing lightweight Adapters, whereas Hugging Face stores complete pre-trained models.
+    SaprotHub adopts the Adapter mechanism, which enables biologists to easily share, co-develop, and collaborate within
+    ColabSaprot.</p>
+    <p>The goal of SaprotHub is to allow all biologists to train their own protein models even without machine learning and 
+    coding background, while Hugging Face&#39;s objective is to open-source the model weights without considering the easy 
+    training aspect.</p>
+    <p>SaprotHub is dedicated to establishing the AI model community for proteins, while Hugging Face has a broader scope.
+    Therefore, SaprotHub&#39;s Adapter store can be built on top of Hugging Face or developed independently.</p>
+    <h3 id="q9-if-i-develop-other-protein-language-models-plms-and-online-platforms-following-saprothub-and-colabsaprot-can-i-be-an-author-on-the-saprothub-paper">Q9: If I develop other protein language models (PLMs) and online platforms following SaprotHub and ColabSaprot, can I be an author on the SaprotHub paper?</h3>
+    <p>All OPMC members will be listed as authors in the SaprotHub paper before its final revision, which is expected to take 4-12 months. Author&#39;s name will be included in the paper. Please note that eligibility to become an OPMC member is determined by the steering committee.</p>
+    <p>If an author of the SaprotHub paper is acknowledged for their contribution in developing a different protein language model (whether it&#39;s a new model or an existing one) that is not related to SaprotHub&#39;s functions, it is required that they acknowledge this new protein language model as automatically being part of the OPMC framework. 
+    In case they publish a paper, just menton this somewhere in the paper. Additionally, any future scientific literature that utilizes this language model for their research should also cite the SaprotHub paper as a reference of OPMC.</p>
+    <h3 id="q10-how-to-be-a-member-of-opmc-or-an-author-of-saprothub">Q10: How to be a member of OPMC or an author of SaprotHub.</h3>
+    <p>Before the final revision of SaprotHub, all OPMC members will be automatically included as authors. However, after the publication of SaprotHub, individuals can still join OPMC but will not be able to be listed as authors in the paper, as it is subject to the requirements of the journal publication - the final version needs to determine the author list.</p>
+    <p>Regarding how to join OPMC, please refer to: 
+        <a href="#joinus">here</a>. 
+    </p>
+    <p>All in all, if you can come up with some cool ideas or novel ways to enhance the impact and influence of Saprot, ColabSaprot, SaprotHub, or OPMC, you may have the opportunity to be listed as an author.</p>
+    <h3 id="q11-if-i-have-made-a-lot-of-valuable-contributions-to-opmc-can-i-become-an-opmc-member-together-with-my-supervisor">Q11: If I have made a lot of valuable contributions to OPMC, can I become an OPMC member together with my supervisor?</h3>
+    <p>Yes. If you have made significant valuable contributions to OPMC, it is possible to become an OPMC member alongside your PhD/postgraduate or internship supervisor. However, the acceptance of your contributions and membership status will be determined by the steering committee. Generally, in such cases, you would need to demonstrate more substantial contributions compared to regular OPMC members. You need to provide official documentation of your relationship with your supervisor, such as an official letter or document confirming their role and support.</p>
+    <h3 id="q11-can-i-use-copy-the-code-of-colabsaprot-for-my-own-protein-language-model-to-build-another-colabplm">Q11: Can I use copy the code of ColabSaprot for my own protein language model to build another ColabPLM?</h3>
+    <p>Yes, you can. But you need to agree to join OPMC, and all papers that use your ColabPLM for research are encouraged to cite the SaprotHub paper, which is the source literature of OPMC.</p>
+    <h3 id="q13-would-the-paper-be-submitted-to-a-journal">Q13: Would the paper be submitted to a journal.</h3>
+    <p>Yes, we plan to submit it to Nature Methods in the form of brief communication. The editor-in-chief of NBT said that the author list of OPMC could be confirmed in the final version. So you have several months time to contribute and join us.</p>
 </div>
         
 </section>
