@@ -6,6 +6,7 @@ body {
     background-color: #f5f5f5;
 }
 
+/* 导航栏样式 */
 .navbar {
     overflow: hidden;
     background-color: #ffffff;
@@ -30,6 +31,7 @@ body {
     color: black;
 }
 
+/* Section 样式 */
 .section {
     padding: 80px 20px;
     max-width: 1200px;
@@ -46,6 +48,7 @@ body {
     background-color: #f8f9fa;
 }
 
+/* 标题和文本样式 */
 h1, h2 {
     color: #343a40;
     text-align: center;
@@ -55,6 +58,7 @@ p {
     color: #6c757d;
 }
 
+/* 成员列表样式 */
 .members-list {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
@@ -79,6 +83,7 @@ p {
     color: #777;
 }
 
+/* 首页样式 */
 #home {
     background-image: url('/templates/figures/pymol.png');
     background-repeat: no-repeat;
@@ -95,6 +100,7 @@ p {
     text-align: center;
 }
 
+/* FAQ 样式 */
 #faq {
     background-color: #f9f9f9;
     padding: 60px 40px;
@@ -127,11 +133,14 @@ p {
     color: #666;
 }
 
+/* 模型和Hub展示样式 */
 .container {
     display: flex;
     justify-content: space-around;
     padding: 20px;
     gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .model {
@@ -143,17 +152,21 @@ p {
     width: 300px;
 }
 
-h2 {
+.model h2 {
     color: #333;
 }
 
-a {
+.model p {
+    color: #6c757d;
+}
+
+.model a {
     display: block;
     margin: 10px 0;
     color: #007bff;
     text-decoration: none;
 }
 
-a:hover {
+.model a:hover {
     text-decoration: underline;
 }
