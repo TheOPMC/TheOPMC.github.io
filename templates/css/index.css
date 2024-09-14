@@ -1,159 +1,233 @@
+/* Global Settings */
 body {
-    font-family: 'Roboto', Arial, sans-serif;
+    font-family: 'Lato', 'Roboto', Arial, sans-serif;
     margin: 0;
-    padding: 0;
-    line-height: 1.6;
+    padding: 0 20px;
+    line-height: 1.7;
     background-color: #f5f5f5;
+    color: #212529;
 }
 
-/* 导航栏样式 */
+/* Navbar Styles */
 .navbar {
-    overflow: hidden;
     background-color: #ffffff;
     position: fixed;
     top: 0;
     width: 100%;
     z-index: 1000;
-    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 10px 0;
+    text-align: center;
 }
 
 .navbar a {
-    float: left;
-    display: block;
-    color: #333;
-    text-align: center;
-    padding: 14px 16px;
+    display: inline-block;
+    padding: 14px 20px;
+    color: #495057;
     text-decoration: none;
+    transition: background-color 0.3s, color 0.3s;
 }
 
 .navbar a:hover {
-    background-color: #ddd;
-    color: black;
+    background-color: #007bff;
+    color: white;
 }
 
-/* Section 样式 */
+/* Section Styles */
 .section {
     padding: 80px 20px;
     max-width: 1200px;
-    margin-left: auto;
-    margin-right: auto;
-    transition: background-color 0.3s ease;
+    margin: 60px auto;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
 }
 
-.section:nth-child(even) {
-    background-color: #e9ecef;
-}
-
-.section:nth-child(odd) {
-    background-color: #f8f9fa;
-}
-
-/* 标题和文本样式 */
-h1, h2 {
-    color: #343a40;
+/* Heading Styles */
+h2 {
     text-align: center;
+    margin-bottom: 40px;
+    color: #212529;
 }
 
+/* Paragraph Styles */
 p {
-    color: #6c757d;
+    font-size: 1.2em;
+    color: #495057;
+    line-height: 1.8;
+    margin-bottom: 20px;
+    text-align: justify;
 }
 
-/* 成员列表样式 */
+/* Centered Badges and Links (in Features section) */
+#features center {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+/* Image Styles */
+img {
+    max-width: 100%;
+}
+
+/* Contact and About Section */
+#contact, #about {
+    text-align: center;
+    padding: 40px;
+}
+
+#contact h2, #about h2 {
+    margin-bottom: 30px;
+    color: #212529;
+}
+
+#contact p, #about p {
+    max-width: 800px;
+    margin: 0 auto;
+    color: #495057;
+}
+
+/* Members List Styles */
 .members-list {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-    gap: 20px;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 30px;
     justify-items: center;
+    padding: 20px;
 }
 
 .member {
-    background-color: transparent;
+    background-color: #ffffff;
     padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
     text-align: center;
+    width: 180px;
+    height: 100px;
+}
+
+.member:hover {
+    transform: translateY(-5px);
 }
 
 .name {
-    font-size: 1.2em;
+    font-size: 1.4em;
     color: #333;
     font-weight: bold;
 }
 
 .school {
-    font-size: 0.9em;
+    font-size: 1em;
     color: #777;
 }
 
-/* 首页样式 */
+/* Home Section */
 #home {
     background-image: url('/templates/figures/pymol.png');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-}
-
-.text-wrapper {
-    background-color: rgba(255, 255, 255, 0.5);
-    padding: 20px;
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
 }
 
-/* FAQ 样式 */
-#faq {
-    background-color: #f9f9f9;
-    padding: 60px 40px;
+.text-wrapper {
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 30px;
+    border-radius: 10px;
+}
+
+/* FAQs Container Styles */
+#faqs {
+    background-color: #ffffff;
+    padding: 80px 40px;
+    max-width: 1200px;
+    margin: 60px auto;
     border-radius: 8px;
-    margin: 40px 0;
-    font-family: Arial, sans-serif;
-    color: #333;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    line-height: 1.8;
 }
 
-#faq h1 {
-    font-size: 3em;
+/* FAQs Headings */
+#faqs h2 {
+    font-size: 2.5em;
+    color: #212529;
+    margin-bottom: 40px;
     text-align: center;
-    margin-bottom: 50px;
-    color: #222;
 }
 
-#faq .faq-item {
-    margin-bottom: 50px;
-}
-
-#faq .faq-item h2 {
-    font-size: 2em;
-    color: #444;
+#faqs h3 {
+    font-size: 1.6em;
+    color: #343a40;
     margin-bottom: 20px;
+    margin-top: 40px;
 }
 
-#faq .faq-item p {
+/* FAQs Paragraph Styles */
+#faqs p {
     font-size: 1.2em;
-    line-height: 1.6;
-    color: #666;
+    color: #495057;
+    line-height: 1.8;
+    padding: 0 20px;
+    text-align: justify;
 }
 
-/* 模型和Hub展示样式 */
+/* Ordered List in FAQs */
+#faqs ol {
+    padding-left: 40px;
+    margin-bottom: 30px;
+}
+
+#faqs ol li {
+    margin-bottom: 15px;
+    font-size: 1.2em;
+    line-height: 1.8;
+    color: #495057;
+}
+
+/* FAQ Links Styles */
+#faqs a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+#faqs a:hover {
+    text-decoration: underline;
+}
+
+/* Models and Hub Section Styles */
 .container {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-around;
-    padding: 20px;
-    gap: 20px;
-    max-width: 1200px;
+    padding: 60px 20px;
+    gap: 40px;
+    max-width: 1400px;
     margin: 0 auto;
 }
 
 .model {
-    background-color: white;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     text-align: center;
-    width: 300px;
+    transition: transform 0.3s ease;
+    width: 280px;
+}
+
+.model:hover {
+    transform: scale(1.05);
 }
 
 .model h2 {
-    color: #333;
+    color: #212529;
 }
 
 .model p {
@@ -161,12 +235,73 @@ p {
 }
 
 .model a {
-    display: block;
-    margin: 10px 0;
-    color: #007bff;
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
     text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
 }
 
 .model a:hover {
-    text-decoration: underline;
+    background-color: #0056b3;
+}
+
+/* Join Us Section */
+#joinus {
+    background-color: #ffffff;
+    padding: 80px 40px;
+    border-radius: 8px;
+    max-width: 1200px;
+    margin: 60px auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    line-height: 1.8;
+}
+
+/* Join Us Headings */
+#joinus h2 {
+    font-size: 2.2em;
+    color: #212529;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+#joinus h3 {
+    font-size: 1.5em;
+    color: #343a40;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+#joinus h4 {
+    font-size: 1.5em;
+    color: #495057;
+    margin-top: 30px;
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+/* Join Us Paragraph Styles */
+#joinus p {
+    font-size: 1.2em;
+    color: #6c757d;
+    margin-bottom: 20px;
+    line-height: 1.8;
+    padding: 0 20px;
+    text-align: justify;
+}
+
+/* Ordered List in Join Us Section */
+#joinus ol {
+    padding-left: 40px;
+    margin-bottom: 30px;
+}
+
+#joinus ol li {
+    margin-bottom: 15px;
+    font-size: 1.2em;
+    color: #495057;
+    line-height: 1.8;
 }
