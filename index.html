@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Open Protein Modeling Consortium</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="templates/css/index.css">
 </head>
 
@@ -30,8 +33,15 @@
 </div>
 
 <div id="home" class="section">
-    <div class="text-wrapper">
-        <h1>Open Protein Modeling Consortium</h1>
+    <div class="hero-content">
+        <div class="text-wrapper">
+            <h1>Open Protein Modeling Consortium</h1>
+            <p class="hero-tagline">Democratizing protein modeling through collaborative AI</p>
+            <div class="hero-cta">
+                <a href="#features" class="btn btn-primary">Explore Models</a>
+                <a href="#joinus" class="btn btn-secondary">Join Consortium</a>
+            </div>
+        </div>
     </div>
 </div>
 
@@ -42,13 +52,13 @@
 
 <div id="features" class="section">
     <h2>Features</h2>
-    <center>
+    <div class="feature-badges">
     <a href="https://doi.org/10.1101/2024.05.24.595648"><img src="https://img.shields.io/badge/Paper-bioRxiv-green" style="max-width: 100%;"></a>
     <a href="https://huggingface.co/SaProtHub"><img src="https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-red?label=SaprotHub" style="max-width: 100%;"></a>
     <a href="https://colab.research.google.com/github/westlake-repl/SaprotHub/blob/main/colab/SaprotHub_v2.ipynb"><img src="templates/figures/colab-badge.svg" style="max-width: 100%;"></a>
-    <a href="https://cbirt.net/no-coding-required-saprothub-brings-protein-modeling-to-every-biologist/" alt="blog"><img src="https://img.shields.io/badge/Blog-Medium-purple" /></a> 
+    <a href="https://cbirt.net/no-coding-required-saprothub-brings-protein-modeling-to-every-biologist/" alt="blog"><img src="https://img.shields.io/badge/Blog-Medium-purple" /></a>
     <a href="https://x.com/sokrypton/status/1795525127653986415"><img src="https://img.shields.io/badge/Twitter-blue?logo=twitter" style="max-width: 100%;"></a>
-    </center><span>
+    </div>
     <p>
         We have a <a href="https://huggingface.co/SaProtHub">SaprotHub</a> as a collaborative community, aiming to empowers biologists by enabling them to create and train their own models without the need for advanced ML and coding expertise. We provide various preprocessed datasets and fine-tuned model checkpoints for users to directly utilize.
     </p>
@@ -62,7 +72,7 @@
             <a href="https://colab.research.google.com/github/westlake-repl/SaprotHub/blob/main/colab/SaprotHub_v2.ipynb">ColabSaprot</a>
             <a href="https://huggingface.co/SaProtHub">SaprotHub</a>
         </div>
-        
+
         <div class="model">
             <h2>ProTrek</h2>
             <p>Navigating the Protein Universe through Tri-Modal Contrastive Learning</p>
@@ -107,252 +117,304 @@
 
 <div id="members" class="section">
     <h2>OPMC Authors</h2>
-    <h3>OPMC Senior Authors (Random Order)</h3>
-    <div class="members-list">
+
+    <div class="members-controls">
+        <input type="text" id="member-search" class="search-input" placeholder="Search members...">
+    </div>
+
+    <div class="member-tabs">
+        <button class="tab-btn active" data-tab="senior">Senior Authors (30) - Random Order</button>
+        <button class="tab-btn" data-tab="regular">Regular Authors (25) - Random Order</button>
+    </div>
+
+    <div class="pagination-info" id="members-pagination-info"></div>
+
+    <div class="tab-content active" id="tab-senior">
+        <div class="members-list" id="senior-authors">
         <div class="member">
-            <!-- <img src="templates/figures/portraits/sergey.png"> -->
+            <img src="templates/figures/portraits/sergey.png" alt="Sergey Ovchinnikov" class="member-portrait">
             <span class="name">Sergey Ovchinnikov</span><br>
             <span class="school">MIT</span>
         </div>
         <div class="member">
-            <!-- <img src="templates/figures/portraits/martin.png"> -->
+            <img src="templates/figures/portraits/martin.png" alt="Martin Steinegger" class="member-portrait">
             <span class="name">Martin Steinegger</span><br>
             <span class="school">Seoul National University</span>
         </div>
         <div class="member">
-            <!-- <img src="templates/figures/portraits/kevin.png"> -->
+            <img src="templates/figures/portraits/kevin.png" alt="Kevin K. Yang" class="member-portrait">
             <span class="name">Kevin K. Yang</span><br>
             <span class="school">Microsoft Research</span>
         </div>
         <div class="member">
-            <!-- <img src="templates/figures/portraits/micheal.png"> -->
+            <img src="templates/figures/portraits/micheal.png" alt="Michael Heinzinger" class="member-portrait">
             <span class="name">Michael Heinzinger</span><br>
             <span class="school">Institute of Computational Biology</span>
         </div>
         <div class="member">
-            <!-- <img src="templates/figures/portraits/pascal.png", height="160"> -->
+            <img src="templates/figures/portraits/pascal.png" alt="Pascal Notin" class="member-portrait">
             <span class="name">Pascal Notin</span><br>
             <span class="school">Harvard Medical School</span>
         </div>
         <div class="member">
-            <!-- <img src="templates/figures/portraits/pranam.png", height="160"> -->
+            <img src="templates/figures/portraits/pranam.png" alt="Pranam Chatterjee" class="member-portrait">
             <span class="name">Pranam Chatterjee</span><br>
             <span class="school">University of Pennsylvania</span>
         </div>
         <div class="member">
-            <!-- <img src="templates/figures/portraits/jia.png"> -->
+            <img src="templates/figures/portraits/jia.png" alt="Jia Zheng" class="member-portrait">
             <span class="name">Jia Zheng</span><br>
             <span class="school">Westlake University</span>
         </div>
         <div class="member">
-            <!-- <img src="templates/figures/portraits/stan.png"> -->
+            <img src="templates/figures/portraits/stan.png" alt="Stan Z. Li" class="member-portrait">
             <span class="name">Stan Z. Li</span><br>
             <span class="school">Westlake University</span>
         </div>
         <div class="member">
-            <!-- <img src="templates/figures/portraits/xing.png"> -->
+            <img src="templates/figures/portraits/xing.png" alt="Xing Chang" class="member-portrait">
             <span class="name">Xing Chang</span><br>
             <span class="school">Westlake University</span>
         </div>
         <div class="member">
-            <!-- <img src="templates/figures/portraits/huaizong.png"> -->
+            <img src="templates/figures/portraits/huaizong.png" alt="Huaizong Shen" class="member-portrait">
             <span class="name">Huaizong Shen</span><br>
             <span class="school">Westlake University</span>
         </div>
         <div class="member">
-            <!-- <img src="templates/figures/portraits/huaizong.png"> -->
+            <div class="member-portrait-placeholder">FY</div>
             <span class="name">Fajie Yuan</span><br>
             <span class="school">Westlake University</span>
         </div>
         <div class="member">
-            <!-- <img src="templates/figures/portraits/noelia.png"> -->
+            <img src="templates/figures/portraits/noelia.png" alt="Noelia Ferruz" class="member-portrait">
             <span class="name">Noelia Ferruz</span><br>
-            <span class="school">The Centre for Genomic Regulation (CRG)</span>
+        <span class="school">The Centre for Genomic Regulation (CRG)</span>
         </div>
         <div class="member">
-            <!-- <img src="templates/figures/portraits/rohit.png"> -->
+            <img src="templates/figures/portraits/rohit.png" alt="Rohit Singh" class="member-portrait">
             <span class="name">Rohit Singh</span><br>
             <span class="school">Duke University</span>
         </div>
         <div class="member">
-            <!-- <img src="templates/figures/portraits/debora.png"> -->
+            <img src="templates/figures/portraits/debora.png" alt="Debora S. Marks" class="member-portrait">
             <span class="name">Debora S. Marks</span><br>
             <span class="school">Harvard Medical School</span>
         </div>
         <div class="member">
-            <!-- <img src="templates/figures/portraits/anping.png"> -->
+            <img src="templates/figures/portraits/anping.png" alt="Anping Zeng" class="member-portrait">
             <span class="name">Anping Zeng</span><br>
             <span class="school">Westlake University</span>
         </div>
         <div class="member">
-            <!-- <img src="templates/figures/portraits/jijie.png"> -->
+            <img src="templates/figures/portraits/jijie.png" alt="Jijie Chai" class="member-portrait">
             <span class="name">Jijie Chai</span><br>
             <span class="school">Westlake University</span>
         </div>
         <div class="member">
-            <!-- <img src="templates/figures/portraits/jijie.png"> -->
+            <div class="member-portrait-placeholder">FJ</div>
             <span class="name">Feng Ju</span><br>
             <span class="school">Westlake University</span>
         </div>
         <div class="member">
-            <!-- <img src="templates/figures/portraits/anthony.png"> -->
+            <img src="templates/figures/portraits/anthony.png" alt="Anthony Gitter" class="member-portrait">
             <span class="name">Anthony Gitter</span><br>
             <span class="school">University of Wisconsin-Madison</span>
         </div>
         <div class="member">
-            <!-- <img src="templates/figures/portraits/anum.jpg", height="160"> -->
+            <img src="templates/figures/portraits/anum.jpg" alt="Anum Glasgow" class="member-portrait">
             <span class="name">Anum Glasgow</span><br>
             <span class="school">Columbia University</span>
         </div>
         <div class="member">
-            <!-- <img src="templates/figures/portraits/milot.jpg", height="160"> -->
+            <img src="templates/figures/portraits/milot.jpg" alt="Milot Mirdita" class="member-portrait">
             <span class="name">Milot Mirdita</span><br>
             <span class="school">Seoul National University</span>
         </div>
         <div class="member">
+            <div class="member-portrait-placeholder">PK</div>
             <span class="name">Philip M. Kim</span><br>
             <span class="school">University of Toronto</span>
         </div>
         <div class="member">
+            <div class="member-portrait-placeholder">CS</div>
             <span class="name">Christopher Snow</span><br>
             <span class="school">Colorado State University</span>
         </div>
         <div class="member">
+            <div class="member-portrait-placeholder">VN</div>
             <span class="name">Vasilis Ntranos</span><br>
             <span class="school">University of California</span>
         </div>
         <div class="member">
+            <div class="member-portrait-placeholder">PR</div>
             <span class="name">Philip A. Romero</span><br>
             <span class="school">Duke University</span>
         </div>
         <div class="member">
+            <div class="member-portrait-placeholder">JY</div>
             <span class="name">Jianyi Yang</span><br>
             <span class="school">Shandong University</span>
         </div>
         <div class="member">
+            <div class="member-portrait-placeholder">CG</div>
             <span class="name">Caixia Gao</span><br>
             <span class="school">Chinese Academy of Sciences</span>
         </div>
         <div class="member">
+            <div class="member-portrait-placeholder">LH</div>
             <span class="name">Liang Hong</span><br>
             <span class="school">Shanghai Jiao Tong University</span>
         </div>
         <div class="member">
+            <div class="member-portrait-placeholder">MB</div>
             <span class="name">Michael Bronstein</span><br>
             <span class="school">University of Oxford</span>
         </div>
         <div class="member">
+            <div class="member-portrait-placeholder">TS</div>
             <span class="name">Tong Si</span><br>
             <span class="school">Chinese Academy of Sciences</span>
         </div>
         <div class="member">
+            <div class="member-portrait-placeholder">JL</div>
             <span class="name">Jianming Liu</span><br>
             <span class="school">Westlake University</span>
         </div>
+        </div>
     </div>
-    <h3>OPMC Regular Authors (Random Order)</h3>
-    <div class="members-list">
+
+    <div class="tab-content" id="tab-regular">
+        <div class="members-list" id="regular-authors">
         <div class="member">
+            <div class="member-portrait-placeholder">JS</div>
             <span class="name">Jin Su</span><br>
             <span class="school">Westlake University</span>
         </div>
         <div class="member">
+            <div class="member-portrait-placeholder">TT</div>
             <span class="name">Tianli Tao</span><br>
             <span class="school">Westlake University</span>
         </div>
         <div class="member">
+            <div class="member-portrait-placeholder">CH</div>
             <span class="name">Chenchen Han</span><br>
             <span class="school">Westlake University</span>
         </div>
         <div class="member">
+            <div class="member-portrait-placeholder">JZ</div>
             <span class="name">Jiawei Zhang </span><br>
             <span class="school">Westlake University</span>
         </div>
         <div class="member">
+            <div class="member-portrait-placeholder">YF</div>
             <span class="name">Yuliang Fan </span><br>
             <span class="school">Westlake University</span>
         </div>
         <div class="member">
+            <div class="member-portrait-placeholder">YT</div>
             <span class="name">Yuyang Tao </span><br>
             <span class="school">ShanghaiTech University</span>
         </div>
         <div class="member">
+            <div class="member-portrait-placeholder">FD</div>
             <span class="name">Fengyuan Dai </span><br>
             <span class="school">Westlake University</span>
         </div>
         <div class="member">
+            <div class="member-portrait-placeholder">XZ</div>
             <span class="name">Xuting Zhang </span><br>
             <span class="school">Westlake University</span>
         </div>
         <div class="member">
+            <div class="member-portrait-placeholder">YZ</div>
             <span class="name">Yuyang Zhou</span><br>
             <span class="school">Westlake University</span>
         </div>
         <div class="member">
+            <div class="member-portrait-placeholder">JS</div>
             <span class="name">Junjie Shan</span><br>
             <span class="school">Westlake University</span>
         </div>
         <div class="member">
+            <div class="member-portrait-placeholder">XZ</div>
             <span class="name">Xibin Zhou</span><br>
             <span class="school">Westlake University</span>
         </div>
         <div class="member">
+            <div class="member-portrait-placeholder">YH</div>
             <span class="name">Yan He</span><br>
             <span class="school">Westlake University</span>
         </div>
         <div class="member">
+            <div class="member-portrait-placeholder">SJ</div>
             <span class="name">Shiyu Jiang</span><br>
             <span class="school">Westlake University</span>
         </div>
         <div class="member">
+            <div class="member-portrait-placeholder">DM</div>
             <span class="name">Dacheng Ma</span><br>
             <span class="school">Westlake University</span>
         </div>
         <div class="member">
+            <div class="member-portrait-placeholder">YG</div>
             <span class="name">Yuan Gao</span><br>
             <span class="school">University of Chinese Academy of Science</span>
         </div>
         <div class="member">
+            <div class="member-portrait-placeholder">LC</div>
             <span class="name">Linqi Cheng</span><br>
             <span class="school">Department of Chemistry, Rice University</span>
         </div>
         <div class="member">
+            <div class="member-portrait-placeholder">XZ</div>
             <span class="name">Xinzhe Zheng</span><br>
             <span class="school">Department of Chemistry, Rice University</span>
         </div>
         <div class="member">
+            <div class="member-portrait-placeholder">LC</div>
             <span class="name">Lei Chen</span><br>
             <span class="school">Shenzhen Lions King Hi-Tech Co., Ltd</span>
         </div>
         <div class="member">
+            <div class="member-portrait-placeholder">RL</div>
             <span class="name">Rui Long</span><br>
             <span class="school">Shenzhen Lions King Hi-Tech Co., Ltd</span>
         </div>
         <div class="member">
+            <div class="member-portrait-placeholder">LK</div>
             <span class="name">Lingjie Kong</span><br>
             <span class="school">South China Agricultural University</span>
         </div>
         <div class="member">
+            <div class="member-portrait-placeholder">ZP</div>
             <span class="name">Zhongji Pu</span><br>
             <span class="school">Xianghu laboratory</span>
         </div>
         <div class="member">
+            <div class="member-portrait-placeholder">JG</div>
             <span class="name">Jiaming Guan</span><br>
             <span class="school">Hefei MiQro Era Digital Technology Co. Ltd</span>
         </div>
         <div class="member">
+            <div class="member-portrait-placeholder">TZ</div>
             <span class="name">Tianyuan Zhang</span><br>
             <span class="school">Suzhou Polynovo Biotech Co., Ltd., Suzhou 215129, China</span>
         </div>
         <div class="member">
+            <div class="member-portrait-placeholder">CL</div>
             <span class="name">Cheng Li</span><br>
             <span class="school">Suzhou Polynovo Biotech Co., Ltd., Suzhou 215129, China</span>
         </div>
         <div class="member">
+            <div class="member-portrait-placeholder">QY</div>
             <span class="name">Qingyan Yuan</span><br>
             <span class="school">Suzhou Polynovo Biotech Co., Ltd., Suzhou 215129, China</span>
         </div>
+        </div>
     </div>
+
+    <div class="pagination-controls" id="members-pagination"></div>
 </div>
 
 <div id="joinus" class="section">
@@ -391,101 +453,236 @@
 
 <div id="faqs" class="section">
     <h2>FAQs</h2>
-    <h3>Q1: It seems like OPMC and SaprotHub are intertwined but not exactly the same.</h3>
-    <p>Yes, OPMC is a grand goal, and in this paper, it is primarily presented as a concept and vision. The paper introduces 
-    OPMC and implements SaprotHub as a pioneering example to drive the initial realization of OPMC. 
-    Achieving a broader implementation of OPMC requires continuous efforts from the entire community.</p>
-    <h3 id="q2--im-very-interested-in-the-opmc-side-of-this-project-would-i-be-able-to-support-ompc-independently">Q2:  I&#39;m very interested in the OPMC side of this project? Would I be able to support OPMC independently?</h3>
-    <p>Yes, you can. OPMC is not tied exclusively to SaprotHub. SaprotHub serves as an initial implementation case within the
-    broader OPMC concept. We also welcome the inclusion of new protein models in OPMC. There are generally two ways to
-    contribute: either independently of SaprotHub, such as building ESMHub or ProtTransHub, or by joining SaprotHub. While
-    SaprotHub is named after its first model, Saprot, it is not limited to Saprot alone and welcomes the inclusion of 
-    other  language models. The concept of OPMC originated from the SaprotHub paper, so if you would like your protein 
-    model to be part of OPMC or if you adopt the similar construction approach of SaprotHub, we encourage you to cite the
-    source paper. Also see Q9.</p>
-    <h3 id="q3-whats-the-relation-between-opmc-and-the-openfold-consortium">Q3: What&#39;s the relation between OPMC and the OpenFold Consortium?</h3>
-    <p>The goal of the OpenFold Consortium is to develop free and open-source software tools. This differs from the goals of
-    OPMC. OPMC aims to make it easy for all biologists (especially those without machine learning backgrounds and coding
-    skills) to train their own protein models, and to share these models with the community members, allowing for 
-    integration and collaborative development on top of the existing community models.</p>
-    <p>Additionally, so far, the OpenFold Consortium seems to be focusing more on protein structure prediction, while OPMC
-    is more focused on protein function prediction. Furthermore, the number of protein function task categories is far 
-    greater than the number of structure tasks. As a result, biologists often have to fine-tune large pre-trained protein 
-    models based on their own training data, which is a key feature of OPMC.</p>
-    <h3 id="q4-is-the-idea-to-create-a-company-that-provides-the-resources-for-biologists-to-do-model-training-im-unsure-the-vision-here-since-a-lot-of-model-training-is-resource-and-data-constrained-it-would-be-hard-to-create-something-where-every-biologist-to-train-their-own-ai-models-with-just-a-few-clicks-who-would-provide-the-resources-in-this-case">Q4: Is the idea to create a company that provides the resources for biologists to do model training? I&#39;m unsure the vision here, since a lot of model training is resource and data constrained. It would be hard to create something where &quot;every biologist to train their own AI models with just a few clicks.&quot; Who would provide the resources in this case?</h3>
-    <p>No, the primary motivation behind OPMC is to enable biologists to participate in protein model training and 
-    collaborative development, without direct involvement of creating a company or commercial operation.</p>
-    <p>Currently, we do not provide free training resources. Users have the option to purchase GPUs, such as the A100, on 
-    platforms like Colab. OPMC primarily supports fine-tuning tasks or direct prediction tasks for protein language models,
-    rather than pre-training. These tasks typically do not require excessively expensive computational power. With a 
-    budget of around $10, one can easily complete training and prediction tasks on several thousand samples. This cost 
-    is manageable for most individuals and academic institutions. There are also free GPU resources in Colab but they 
-    may not be sufficient for some of your tasks.</p>
-    <p>In the future, we may explore options such as applying for funding or accepting donations to provide some free 
-    computational resources to users. Please note that the purpose of SaprotHub and OPMC is not to provide free computational
-    resources. </p>
-    <h3 id="q5-we-are-open-sourcing-models-as-well-so-it-would-be-interesting-to-collaborate-once-we-release-these-models-however-it-seems-like-currently-the-hub-is-geared-towards-saprot-as-the-main-model-of-choice">Q5: We are open sourcing models as well, so it would be interesting to collaborate once we release these models. However, it seems like currently the hub is geared towards SaProt as the main model of choice.</h3>
-    <p>Saprot is the first model to join the hub, so we named it SaprotHub. However, SaprotHub can also accept other protein
-    models, such as ESM. Of course, you can also independently develop your own model hub. In the future, we will create
-    a webpage for OPMC that will include all the participating models.</p>
-    <p>The reason we adopted the Saprot model is that it is a near-universal model, capable of supporting any protein and 
-    residue-level prediction task, including regression, classification, ranking, as well as zero-shot mutational effect
-    prediction and sequence design tasks. Saprot is also the state-of-the-art protein language model in the community.</p>
-    <p>Additionally, we also hope to include as many other protein language models as possible, but due to limited human
-    resources, we are unable to integrate all the existing protein language models. This is precisely the purpose of 
-    building a community (the development of ColabSaprot took us approximately 4 months. Of course, with the open-sourcing
-    of ColabSaprot, it will be much easier to implement similar functionality for other protein language models).</p>
-    <p>We believe that with the joint efforts of the entire community, the OPMC community store can become more diverse, 
-    and biologists can choose the models that best suit their needs. Therefore, we sincerely invite researchers who are
-    interested in OPMC to join us, and if you have better suggestions, we welcome you to join us in co-building OPMC.</p>
-    <h3 id="q6-esm-alphafold-and-openfold-models-are-not-mentioned-in-the-hub">Q6: ESM, AlphaFold, and Openfold models are not mentioned in the hub.</h3>
-    <p>OPMC mainly focuses on protein function prediction. So ESM is a good fit, AlphaFold and OpenFold target at protein 
-    structure prediction, and could be independent of OPMC or SaprotHub. But please note that developing another ColabESM 
-    will also take some time, and we welcome researchers to integrate the ESM or other models onto the hub.</p>
-    <h3 id="q7-how-do-you-foresee-collaborating-and-sharing-other-open-models">Q7: How do you foresee collaborating and sharing other open models?</h3>
-    <p>The SaprotHub paper primarily focuses on collaboration and sharing within the framework of one backbone model, as this
-    can greatly reduce storage and communication costs by leveraging Adapter technique – users just need to operate on the
-    adapters rather than the large backbone model. Since these models are based on the same backbone network, the input
-    format, network and parameter interfaces are more consistent, which serves as the basic for community sharing, 
-    collaboration and co-construction.</p>
-    <p>As for sharing between different backbone models, this remains a challenge at the moment, although it is an 
-    interesting research direction without an ideal solution yet. For example, if users want to collaborate between 
-    ESM15B and Saprot650M, they would need to upload and download the two complete models, significantly increasing 
-    communication and maintenance costs. As the number of models integrated increases, the demand on GPU performance 
-    would also increase rapidly. </p>
-    <p>However, by using the same backbone model and the Adapter mechanism, these difficulties can be elegantly solved. The
-    Adapters in SaprotHub is just like grafting techniques in biology. Just as a single tree can bear different kinds of 
-    fruit, Saprot acts like the trunk, and the adapters for various downstream tasks resemble the different fruits on the
-    Saprot tree.</p>
-    <p>Additionally, due to the differences in model architecture, input, and output across different models, it is difficult
-    to design a unified interface. Therefore, this paper serves as an initial exploration of OPMC and does not cover 
-    collaboration between different backbone models. This may require more effort from the community, but holds promise 
-    for the future.</p>
-    <h3 id="q8-how-does-this-differentiate-saprothub-from-hugging-face">Q8: How does this differentiate SaprotHub from Hugging Face?</h3>
-    <p>SaprotHub primarily focuses on storing lightweight Adapters, whereas Hugging Face stores complete pre-trained models.
-    SaprotHub adopts the Adapter mechanism, which enables biologists to easily share, co-develop, and collaborate within
-    ColabSaprot.</p>
-    <p>The goal of SaprotHub is to allow all biologists to train their own protein models even without machine learning and 
-    coding background, while Hugging Face&#39;s objective is to open-source the model weights without considering the easy 
-    training aspect.</p>
-    <p>SaprotHub is dedicated to establishing the AI model community for proteins, while Hugging Face has a broader scope.
-    Therefore, SaprotHub&#39;s Adapter store can be built on top of Hugging Face or developed independently.</p>
-    <h3 id="q9-if-i-develop-other-protein-language-models-plms-and-online-platforms-following-saprothub-and-colabsaprot-can-i-be-an-author-on-the-saprothub-paper">Q9: If I develop other protein language models (PLMs) and online platforms following SaprotHub and ColabSaprot, can I be an author on the SaprotHub paper?</h3>
-    <p>All OPMC members will be listed as authors in the SaprotHub paper before its final revision, which is expected to take 4-12 months. Author's name will be included in the paper. Please note that eligibility to become an OPMC regular member is determined by the steering committee.</p>
-    <p>If an OPMC author is primarily granted authorship recognition for developing other PLMHubs, they are required to acknowledge that this model automatically becomes part of the OPMC framework. In case they publish a paper, they should menton this somewhere in the paper. Researchers using this new PLMHub should also cite the original OPMC literature.</p>
-    <h3 id="q10-how-to-be-a-member-of-opmc-or-an-author-of-saprothub">Q10: How to be a member of OPMC or an author of SaprotHub.</h3>
-    <p>Before the final revision of SaprotHub, all OPMC members will be automatically included as authors. However, after the publication of SaprotHub, individuals can still join OPMC but will not be able to be listed as authors in the paper, as it is subject to the requirements of the journal publication - the final version needs to determine the author list.</p>
-    <p>Regarding how to join OPMC, please refer to: 
-        <a href="#joinus">here</a>. 
-    </p>
-    <p>All in all, if you can come up with some cool ideas or novel ways to enhance the impact and influence of Saprot, ColabSaprot, SaprotHub, or OPMC, you may have the opportunity to be listed as an author.</p>
-    <h3 id="q11-if-i-have-made-a-lot-of-valuable-contributions-to-opmc-can-i-become-an-opmc-member-together-with-my-supervisor">Q11: If I have made a lot of valuable contributions to OPMC, can I become an OPMC member together with my supervisor?</h3>
-    <p>Yes. If you have made significant valuable contributions to OPMC, it is possible to become an OPMC member alongside your PhD/postgraduate or internship supervisor. However, the acceptance of your contributions and membership status will be determined by the steering committee. Generally, in such cases, you would need to demonstrate more substantial contributions compared to regular OPMC members. You need to provide official documentation of your relationship with your supervisor, such as an official letter or document confirming their role and support.</p>
+
+    <div class="faq-controls">
+        <button id="expand-all">Expand All</button>
+        <button id="collapse-all">Collapse All</button>
+    </div>
+
+    <div class="faq-item">
+        <div class="faq-question">
+            <h3>Q1: It seems like OPMC and SaprotHub are intertwined but not exactly the same.</h3>
+            <svg class="faq-chevron" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+            </svg>
+        </div>
+        <div class="faq-answer">
+            <div class="faq-answer-content">
+                <p>Yes, OPMC is a grand goal, and in this paper, it is primarily presented as a concept and vision. The paper introduces
+                OPMC and implements SaprotHub as a pioneering example to drive the initial realization of OPMC.
+                Achieving a broader implementation of OPMC requires continuous efforts from the entire community.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="faq-item">
+        <div class="faq-question">
+            <h3>Q2: I'm very interested in the OPMC side of this project? Would I be able to support OPMC independently?</h3>
+            <svg class="faq-chevron" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+            </svg>
+        </div>
+        <div class="faq-answer">
+            <div class="faq-answer-content">
+                <p>Yes, you can. OPMC is not tied exclusively to SaprotHub. SaprotHub serves as an initial implementation case within the
+                broader OPMC concept. We also welcome the inclusion of new protein models in OPMC. There are generally two ways to
+                contribute: either independently of SaprotHub, such as building ESMHub or ProtTransHub, or by joining SaprotHub. While
+                SaprotHub is named after its first model, Saprot, it is not limited to Saprot alone and welcomes the inclusion of
+                other  language models. The concept of OPMC originated from the SaprotHub paper, so if you would like your protein
+                model to be part of OPMC or if you adopt the similar construction approach of SaprotHub, we encourage you to cite the
+                source paper. Also see Q9.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="faq-item">
+        <div class="faq-question">
+            <h3>Q3: What's the relation between OPMC and the OpenFold Consortium?</h3>
+            <svg class="faq-chevron" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+            </svg>
+        </div>
+        <div class="faq-answer">
+            <div class="faq-answer-content">
+                <p>The goal of the OpenFold Consortium is to develop free and open-source software tools. This differs from the goals of
+                OPMC. OPMC aims to make it easy for all biologists (especially those without machine learning backgrounds and coding
+                skills) to train their own protein models, and to share these models with the community members, allowing for
+                integration and collaborative development on top of the existing community models.</p>
+                <p>Additionally, so far, the OpenFold Consortium seems to be focusing more on protein structure prediction, while OPMC
+                is more focused on protein function prediction. Furthermore, the number of protein function task categories is far
+                greater than the number of structure tasks. As a result, biologists often have to fine-tune large pre-trained protein
+                models based on their own training data, which is a key feature of OPMC.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="faq-item">
+        <div class="faq-question">
+            <h3>Q4: Is the idea to create a company that provides the resources for biologists to do model training?</h3>
+            <svg class="faq-chevron" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+            </svg>
+        </div>
+        <div class="faq-answer">
+            <div class="faq-answer-content">
+                <p>No, the primary motivation behind OPMC is to enable biologists to participate in protein model training and
+                collaborative development, without direct involvement of creating a company or commercial operation.</p>
+                <p>Currently, we do not provide free training resources. Users have the option to purchase GPUs, such as the A100, on
+                platforms like Colab. OPMC primarily supports fine-tuning tasks or direct prediction tasks for protein language models,
+                rather than pre-training. These tasks typically do not require excessively expensive computational power. With a
+                budget of around $10, one can easily complete training and prediction tasks on several thousand samples. This cost
+                is manageable for most individuals and academic institutions. There are also free GPU resources in Colab but they
+                may not be sufficient for some of your tasks.</p>
+                <p>In the future, we may explore options such as applying for funding or accepting donations to provide some free
+                computational resources to users. Please note that the purpose of SaprotHub and OPMC is not to provide free computational
+                resources.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="faq-item">
+        <div class="faq-question">
+            <h3>Q5: We are open sourcing models as well. However, it seems like currently the hub is geared towards SaProt.</h3>
+            <svg class="faq-chevron" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+            </svg>
+        </div>
+        <div class="faq-answer">
+            <div class="faq-answer-content">
+                <p>Saprot is the first model to join the hub, so we named it SaprotHub. However, SaprotHub can also accept other protein
+                models, such as ESM. Of course, you can also independently develop your own model hub. In the future, we will create
+                a webpage for OPMC that will include all the participating models.</p>
+                <p>The reason we adopted the Saprot model is that it is a near-universal model, capable of supporting any protein and
+                residue-level prediction task, including regression, classification, ranking, as well as zero-shot mutational effect
+                prediction and sequence design tasks. Saprot is also the state-of-the-art protein language model in the community.</p>
+                <p>Additionally, we also hope to include as many other protein language models as possible, but due to limited human
+                resources, we are unable to integrate all the existing protein language models. This is precisely the purpose of
+                building a community (the development of ColabSaprot took us approximately 4 months. Of course, with the open-sourcing
+                of ColabSaprot, it will be much easier to implement similar functionality for other protein language models).</p>
+                <p>We believe that with the joint efforts of the entire community, the OPMC community store can become more diverse,
+                and biologists can choose the models that best suit their needs. Therefore, we sincerely invite researchers who are
+                interested in OPMC to join us, and if you have better suggestions, we welcome you to join us in co-building OPMC.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="faq-item">
+        <div class="faq-question">
+            <h3>Q6: ESM, AlphaFold, and Openfold models are not mentioned in the hub.</h3>
+            <svg class="faq-chevron" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+            </svg>
+        </div>
+        <div class="faq-answer">
+            <div class="faq-answer-content">
+                <p>OPMC mainly focuses on protein function prediction. So ESM is a good fit, AlphaFold and OpenFold target at protein
+                structure prediction, and could be independent of OPMC or SaprotHub. But please note that developing another ColabESM
+                will also take some time, and we welcome researchers to integrate the ESM or other models onto the hub.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="faq-item">
+        <div class="faq-question">
+            <h3>Q7: How do you foresee collaborating and sharing other open models?</h3>
+            <svg class="faq-chevron" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+            </svg>
+        </div>
+        <div class="faq-answer">
+            <div class="faq-answer-content">
+                <p>The SaprotHub paper primarily focuses on collaboration and sharing within the framework of one backbone model, as this
+                can greatly reduce storage and communication costs by leveraging Adapter technique – users just need to operate on the
+                adapters rather than the large backbone model. Since these models are based on the same backbone network, the input
+                format, network and parameter interfaces are more consistent, which serves as the basic for community sharing,
+                collaboration and co-construction.</p>
+                <p>As for sharing between different backbone models, this remains a challenge at the moment, although it is an
+                interesting research direction without an ideal solution yet. For example, if users want to collaborate between
+                ESM15B and Saprot650M, they would need to upload and download the two complete models, significantly increasing
+                communication and maintenance costs. As the number of models integrated increases, the demand on GPU performance
+                would also increase rapidly.</p>
+                <p>However, by using the same backbone model and the Adapter mechanism, these difficulties can be elegantly solved. The
+                Adapters in SaprotHub is just like grafting techniques in biology. Just as a single tree can bear different kinds of
+                fruit, Saprot acts like the trunk, and the adapters for various downstream tasks resemble the different fruits on the
+                Saprot tree.</p>
+                <p>Additionally, due to the differences in model architecture, input, and output across different models, it is difficult
+                to design a unified interface. Therefore, this paper serves as an initial exploration of OPMC and does not cover
+                collaboration between different backbone models. This may require more effort from the community, but holds promise
+                for the future.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="faq-item">
+        <div class="faq-question">
+            <h3>Q8: How does this differentiate SaprotHub from Hugging Face?</h3>
+            <svg class="faq-chevron" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+            </svg>
+        </div>
+        <div class="faq-answer">
+            <div class="faq-answer-content">
+                <p>SaprotHub primarily focuses on storing lightweight Adapters, whereas Hugging Face stores complete pre-trained models.
+                SaprotHub adopts the Adapter mechanism, which enables biologists to easily share, co-develop, and collaborate within
+                ColabSaprot.</p>
+                <p>The goal of SaprotHub is to allow all biologists to train their own protein models even without machine learning and
+                coding background, while Hugging Face's objective is to open-source the model weights without considering the easy
+                training aspect.</p>
+                <p>SaprotHub is dedicated to establishing the AI model community for proteins, while Hugging Face has a broader scope.
+                Therefore, SaprotHub's Adapter store can be built on top of Hugging Face or developed independently.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="faq-item">
+        <div class="faq-question">
+            <h3>Q9: If I develop other PLMs following SaprotHub, can I be an author on the SaprotHub paper?</h3>
+            <svg class="faq-chevron" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+            </svg>
+        </div>
+        <div class="faq-answer">
+            <div class="faq-answer-content">
+                <p>All OPMC members will be listed as authors in the SaprotHub paper before its final revision, which is expected to take 4-12 months. Author's name will be included in the paper. Please note that eligibility to become an OPMC regular member is determined by the steering committee.</p>
+                <p>If an OPMC author is primarily granted authorship recognition for developing other PLMHubs, they are required to acknowledge that this model automatically becomes part of the OPMC framework. In case they publish a paper, they should menton this somewhere in the paper. Researchers using this new PLMHub should also cite the original OPMC literature.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="faq-item">
+        <div class="faq-question">
+            <h3>Q10: How to be a member of OPMC or an author of SaprotHub?</h3>
+            <svg class="faq-chevron" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+            </svg>
+        </div>
+        <div class="faq-answer">
+            <div class="faq-answer-content">
+                <p>Before the final revision of SaprotHub, all OPMC members will be automatically included as authors. However, after the publication of SaprotHub, individuals can still join OPMC but will not be able to be listed as authors in the paper, as it is subject to the requirements of the journal publication - the final version needs to determine the author list.</p>
+                <p>Regarding how to join OPMC, please refer to: <a href="#joinus">here</a>.</p>
+                <p>All in all, if you can come up with some cool ideas or novel ways to enhance the impact and influence of Saprot, ColabSaprot, SaprotHub, or OPMC, you may have the opportunity to be listed as an author.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="faq-item">
+        <div class="faq-question">
+            <h3>Q11: If I have made valuable contributions, can I become an OPMC member with my supervisor?</h3>
+            <svg class="faq-chevron" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+            </svg>
+        </div>
+        <div class="faq-answer">
+            <div class="faq-answer-content">
+                <p>Yes. If you have made significant valuable contributions to OPMC, it is possible to become an OPMC member alongside your PhD/postgraduate or internship supervisor. However, the acceptance of your contributions and membership status will be determined by the steering committee. Generally, in such cases, you would need to demonstrate more substantial contributions compared to regular OPMC members. You need to provide official documentation of your relationship with your supervisor, such as an official letter or document confirming their role and support.</p>
+            </div>
+        </div>
+    </div>
 </div>
         
 <div class="footer">
     <p>© 2024 Open Protein Modeling Consortium</p>
-</section>
+</div>
 
 <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
