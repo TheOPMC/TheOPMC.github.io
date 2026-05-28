@@ -25,35 +25,44 @@ The entire website is contained in `index.html` with section-based navigation us
 - **FAQs**: Detailed Q&A about OPMC, SaprotHub, and collaboration
 
 ### Static Assets
-- `templates/css/index.css`: All styling (responsive grid layouts, navbar, sections)
+- `templates/css/index.css`: All styling using CSS variables (design tokens), responsive grid layouts, navbar, sections
 - `templates/figures/`: Images including protein_universe.jpg (hero background), colab-badge.svg, and portraits/
-- No JavaScript files (only inline Google Analytics and busuanzi visitor counter)
+- `js/scripts.js`: Interactive features including smooth scrolling, navbar scroll behavior, FAQ accordion, member search/pagination, and mobile menu toggle
+- Inline scripts: Google Analytics (G-HQCSQ1GWFE) and busuanzi visitor counter
 
 ## Development Workflow
 
 ### Making Content Changes
 1. Edit `index.html` directly for content updates
 2. Edit `templates/css/index.css` for styling changes
-3. Test locally by opening index.html in a browser
-4. Commit and push to main branch (auto-deploys via GitHub Pages)
+3. Edit `js/scripts.js` for interactive behavior changes
+4. Test locally by opening index.html in a browser
+5. Commit and push to main branch (auto-deploys via GitHub Pages)
 
 ### Common Tasks
 
 **Adding a new model to Features section**:
-Add a new `<div class="model">` block within the `<div id="models" class="container">` section around line 58-105. Include model name (h2), description (p), and links to Colab/Hub.
+Add a new `<div class="model">` block within the `<div id="models" class="container">` section. Include model name (h2), description (p), and links to Colab/Hub. Search for existing model blocks to match the structure.
 
 **Adding consortium members**:
-Add new `<div class="member">` blocks to either Senior Authors (line 111-252) or Regular Authors (line 254-355) sections. Include name and institution.
+Add new `<div class="member">` blocks to either Senior Authors or Regular Authors sections. Include `<span class="name">` and `<span class="school">` elements. The JavaScript will automatically handle pagination and search functionality.
 
 **Updating contact information**:
-Modify the #contact section (line 382-390).
+Modify the #contact section.
 
 **Adding FAQ entries**:
-Add new h3 (question) and p (answer) elements within the #faqs section (line 392-484).
+Add new `<div class="faq-item">` blocks within the #faqs section. Include `<div class="faq-question">` (h3) and `<div class="faq-answer">` (p) elements. The JavaScript accordion will automatically handle the new entries.
+
+**Modifying interactive features**:
+Edit `js/scripts.js` to change behavior for smooth scrolling, navbar highlighting, FAQ accordion, member search/pagination, or mobile menu.
 
 ### Testing
 Open `index.html` in a web browser to preview changes. No build step required. Verify:
-- All anchor links navigate correctly
+- All anchor links navigate correctly with smooth scrolling
+- Navbar highlights the active section on scroll
+- FAQ accordion expands/collapses properly
+- Member search and pagination work correctly
+- Mobile menu toggle functions on small screens
 - Responsive layout works on different screen sizes
 - External links (Colab notebooks, HuggingFace hubs) are valid
 
@@ -67,3 +76,6 @@ Changes pushed to the main branch automatically deploy via GitHub Pages. The sit
 - The site uses Google Analytics (tracking ID: G-HQCSQ1GWFE)
 - Background image path in CSS uses absolute path: `/templates/figures/protein_universe.jpg`
 - Member portraits are commented out in HTML but structure remains for future use
+- Interactive features (FAQ accordion, member pagination, search) are handled by `js/scripts.js`
+- Member pagination displays 8 members per page (2 rows × 4 columns)
+- CSS uses design tokens (CSS variables) defined in `:root` for consistent theming
