@@ -7,13 +7,14 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 This is the official website for the Open Protein Modeling Consortium (OPMC), a collaborative initiative for protein research community. The site is a static GitHub Pages website showcasing OPMC's mission, featured protein language models, consortium members, and community information.
 
 **Repository**: TheOPMC.github.io (GitHub Pages site)
+**Deployment URL**: https://theopmc.github.io
 **Tech Stack**: Static HTML/CSS website with no build process
 **Primary File**: index.html (single-page application with anchor navigation)
 
 ## Architecture
 
 ### Single-Page Structure
-The entire website is contained in `index.html` with section-based navigation using anchor links (#home, #about, #features, #members, #joinus, #contact, #faqs). Each section is a `<div>` with class "section" and corresponding ID.
+The entire website is contained in `index.html` with section-based navigation using anchor links. Each anchor (e.g., `#features`) directly targets the section's `id` attribute (e.g., `<div id="features">`). Sections use class "section" for shared styling.
 
 ### Key Sections
 - **Home**: Hero section with background image
@@ -25,7 +26,7 @@ The entire website is contained in `index.html` with section-based navigation us
 - **FAQs**: Detailed Q&A about OPMC, SaprotHub, and collaboration
 
 ### Static Assets
-- `templates/css/index.css`: All styling using CSS variables (design tokens), responsive grid layouts, navbar, sections
+- `templates/css/index.css`: All styling. CSS variables (design tokens) are defined in `:root` for consistent theming — modify these to change colors, spacing, and typography globally.
 - `templates/figures/`: Images including protein_universe.jpg (hero background), colab-badge.svg, and portraits/
 - `js/scripts.js`: Interactive features including smooth scrolling, navbar scroll behavior, FAQ accordion, member search/pagination, and mobile menu toggle
 - Inline scripts: Google Analytics (G-HQCSQ1GWFE) and busuanzi visitor counter
@@ -78,4 +79,3 @@ Changes pushed to the main branch automatically deploy via GitHub Pages. The sit
 - Member portraits are commented out in HTML but structure remains for future use
 - Interactive features (FAQ accordion, member pagination, search) are handled by `js/scripts.js`
 - Member pagination displays 8 members per page (2 rows × 4 columns)
-- CSS uses design tokens (CSS variables) defined in `:root` for consistent theming

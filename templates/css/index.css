@@ -431,6 +431,45 @@ a:hover {
     min-height: 3em;
 }
 
+.model .tag {
+    display: inline-block;
+    font-size: 0.7rem;
+    font-weight: 600;
+    padding: 0.3em 0.8em;
+    border-radius: 4px;
+    background: linear-gradient(135deg, #10b981, #059669);
+    color: white;
+    margin-bottom: var(--spacing-sm);
+}
+
+.model-server .tag {
+    background: linear-gradient(135deg, #f59e0b, #d97706);
+}
+
+.model .btn-demo {
+    display: inline-block;
+    padding: 0.5em 1.2em;
+    border-radius: 6px;
+    background: #3b82f6;
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all var(--transition-base);
+}
+
+.model-server .btn-demo {
+    background: linear-gradient(135deg, #ef4444, #dc2626);
+}
+
+.model .btn-demo:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(59, 130, 246, 0.4);
+}
+
+.model-server .btn-demo:hover {
+    box-shadow: 0 4px 12px rgba(239, 68, 68, 0.4);
+}
+
 .model a {
     display: inline-block;
     margin: 0.5rem 0.25rem;
